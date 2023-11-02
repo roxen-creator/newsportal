@@ -1,4 +1,4 @@
-<footer class="py-5 bg-dark">
+<footer class="py-3 bg-dark">
   <div class="container">
     <ul class="navbar-nav ml-auto">
       <li class="nav-item">
@@ -11,6 +11,6 @@
     <p class="m-0 text-center text-white">Copyright &copy; InfoPulse
       <?php echo date('Y'); ?>
     </p>
-  </div>
+ </div>
   <!-- /.container -->
 </footer>

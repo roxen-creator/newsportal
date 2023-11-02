@@ -67,6 +67,7 @@ if ($result->num_rows > 0) {
   <link href="css/modern-business.css" rel="stylesheet">
 
   <link href="css/login-btn.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
 </head>
 
@@ -117,20 +118,33 @@ if ($result->num_rows > 0) {
               <?php echo htmlentities($row['postedBy']); ?> on </b>
               <?php echo htmlentities($row['postingdate']); ?> |
               <?php if ($row['lastUpdatedBy'] != ''): ?>
-              <b>Last Updated by </b>
-              <?php echo htmlentities($row['lastUpdatedBy']); ?> on </b>
+              <b>Last Updated on </b>
+
               <?php echo htmlentities($row['UpdationDate']); ?>
             </p>
             <?php endif; ?>
-            <p><strong>Share:</strong> <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl; ?>"
-                target="_blank">Facebook</a> |
-              <a href="https://twitter.com/share?url=<?php echo $currenturl; ?>" target="_blank">Twitter</a> |
-              <a href="https://web.whatsapp.com/send?text=<?php echo $currenturl; ?>" target="_blank">Whatsapp</a> |
+            <p><strong>Share:</strong>
+              <a href="http://www.facebook.com/share.php?u=<?php echo $currenturl; ?>" target="_blank">
+                <i class="fab fa-facebook"></i> Facebook
+              </a> |
+              <a href="https://twitter.com/share?url=<?php echo $currenturl; ?>" target="_blank">
+                <i class="fab fa-twitter"></i> Twitter
+              </a> |
+              <a href="https://web.whatsapp.com/send?text=<?php echo $currenturl; ?>" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+              </a> |
               <a href="http://www.linkedin.com/shareArticle?mini=true&amp;url=<?php echo $currenturl; ?>"
-                target="_blank">Linkedin</a> <b>Visits:</b>
+                target="_blank">
+                <i class="fab fa-linkedin"></i> LinkedIn
+              </a> <b>Visits:</b>
               <?php print $visits; ?>
+
             </p>
             <hr />
+
+
+
+
 
             <img class="img-fluid rounded" src="admin/postimages/<?php echo htmlentities($row['PostImage']); ?>"
               alt="<?php echo htmlentities($row['posttitle']); ?>">
