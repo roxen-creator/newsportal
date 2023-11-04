@@ -1,16 +1,16 @@
-<footer class="py-3 bg-dark">
+<footer class="py-4 bg-dark text-light">
   <div class="container">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-        <a class="nav-link" href="about-us.php">About</a>
-      </li>
-      <li class="nav-item">
-        <a class "nav-link" href="contact-us.php">Contact us</a>
-      </li>
-    </ul>
-    <p class="m-0 text-center text-white">Copyright &copy; InfoPulse
-      <?php echo date('Y'); ?>
-    </p>
- </div>
-  <!-- /.container -->
+    <div class="row justify-content-center"> <!-- Center the content -->
+      <div class="col-md-6">
+        <h4 class="text-center">Contact Us</h4> <!-- Center the heading text -->
+        <p class="text-center">If you have any questions or feedback, feel free to contact us.</p>
+        <!-- Center the paragraph text -->
+        <a class="btn btn-primary d-block mx-auto" href="contact-us.php">Contact Us</a> <!-- Center the button -->
+      </div>
+    </div>
+    <hr>
+    <p class="text-center">&copy;
+      <?php echo date('Y'); ?> InfoPulse. All rights reserved.
+    </p> <!-- Center the copyright text -->
+  </div>
 </footer>

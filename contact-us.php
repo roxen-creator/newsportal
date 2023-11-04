@@ -17,19 +17,17 @@ include('includes/config.php');
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-  <!-- Custom styles for this template -->
-  <link href="css/modern-business.css" rel="stylesheet">
 
 
-  <link href="css/login-btn.css" rel="stylesheet">
+
 
 
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <?php include('includes/header.php'); ?>
+
+
   <!-- Page Content -->
   <div class="container">
 
@@ -65,12 +63,7 @@ include('includes/config.php');
     <?php } ?>
 
   </div>
-  <!-- /.container -->
 
-  <!-- Footer -->
-  <?php include('includes/footer.php'); ?>
-
-  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 

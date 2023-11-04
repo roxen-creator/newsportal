@@ -4,6 +4,7 @@
 <head>
   <!-- Add Bootstrap CSS link -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <style>
     .navbar .navbar-category .nav-link.active {
       font-weight: bold;
@@ -51,67 +52,11 @@
       </div>
     </div>
   </nav>
+  <?php
+  include('includes/head.php');
 
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="navbar-category" style="padding-top: 55px;">
-          <div class="navbar-category-list d-flex justify-content-center flex-wrap collapse navbar-collapse"
-            id="navbarNavCategory">
-            <style>
-              .nav-link {
-                border: 1px solid #ccc;
-                /* Add a subtle border to the nav-links */
-                border-radius: 5px;
-                /* Add rounded corners for a cleaner look */
-                padding: 5px 10px;
-                /* Adjust padding for spacing */
-                margin-right: 15px;
-                margin-bottom: 10px;
-              }
-            </style>
-            <a href="index.php" class="nav-link <?php if ($currentPage === 'index.php')
-              echo 'active'; ?>"> Home </a>
+  ?>
 
-            <?php
-            $query = mysqli_query($con, "select id, CategoryName from tblcategory");
-            while ($row = mysqli_fetch_array($query)) {
-              $categoryId = $row['id'];
-              $categoryName = htmlentities($row['CategoryName']);
-              $activeClass = ($currentCategory === $categoryId) ? 'active' : '';
-              echo '<a href="category.php?catid=' . $categoryId . '" class="nav-link ' . $activeClass . '">' . $categoryName . '</a>';
-            }
-            ?>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
-
-
-<script>
-  function updateDateTime() {
-    const datetimeElement = document.getElementById("datetime");
-    const currentDate = new Date();
-
-
-    const options = {
-      weekday: 'long', // 'short', 'narrow' can also be used
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    };
-
-    const formattedDate = currentDate.toLocaleDateString(undefined, options);
-    const formattedTime = currentDate.toLocaleTimeString();
-    const dateTimeString = `${formattedDate} - ${formattedTime}`;
-    datetimeElement.textContent = dateTimeString;
-  }
-
-  updateDateTime();
-  setInterval(updateDateTime, 1000);
-
-</script>
